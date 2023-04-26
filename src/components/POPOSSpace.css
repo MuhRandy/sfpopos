@@ -1,9 +1,11 @@
 .POPOSSpace {
   width: 100%;
   text-align: center;
+  text-decoration: none;
+  color: black;
 }
 
-.POPOSSpace > img {
+.POPOSSpace img {
   width: 100%;
   height: auto;
 }
@@ -18,4 +20,9 @@
   position: relative;
   top: -4px;
   left: 3px;
+}
+
+.Link {
+  text-decoration: none;
+  color: black;
 }
