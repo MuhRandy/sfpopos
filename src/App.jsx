@@ -4,14 +4,17 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import Title from "./Title";
 import POPOSList from "./POPOSList";
+import Footer from "./Footer";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const today = new Date();
+  const year = today.getFullYear();
 
   return (
     <div className="App">
       <Title />
       <POPOSList />
+      <Footer year={year} />
     </div>
   );
 }

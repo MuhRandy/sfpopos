@@ -1,8 +1,8 @@
 .POPOSList {
-  display: flex;
-  width: 100%;
-  gap: 30px;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
+  width: calc(100% - 80px);
+  margin: auto;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 40px;
 }
