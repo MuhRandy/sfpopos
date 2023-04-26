@@ -1,16 +1,20 @@
 import POPOSSpace from "./POPOSSpace";
 import "./POPOSList.css";
+import data from "./sfpopos-data.json";
 
 export default function POPOSList() {
+  return <div className="POPOSList">{spaces}</div>;
+}
+
+const spaces = data.map(({ title, address, hours }) => {
   const image = "https://placehold.co/300";
   return (
-    <div className="POPOSList">
-      <POPOSSpace name="Area 1" address="Jl. Sala Empat 72" img={image} />
-      <POPOSSpace name="Area 2" address="Jl. Sala Empat 72" img={image} />
-      <POPOSSpace name="Area 3" address="Jl. Sala Empat 72" img={image} />
-      <POPOSSpace name="Area 4" address="Jl. Sala Empat 72" img={image} />
-      <POPOSSpace name="Area 5" address="Jl. Sala Empat 72" img={image} />
-      <POPOSSpace name="Area 6" address="Jl. Sala Empat 72" img={image} />
-    </div>
+    <POPOSSpace
+      key={title}
+      name={title}
+      address={address}
+      img={image}
+      hours={hours}
+    />
   );
-}
+});

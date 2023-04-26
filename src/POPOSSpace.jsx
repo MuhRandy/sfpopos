@@ -4,10 +4,9 @@ import "./POPOSSpace.css";
 
 export default function POPOSSpace(props) {
   const [like, setLike] = useState(0);
-  const { name, address, img } = props;
+  const { name, address, img, hours } = props;
   return (
     <div className="POPOSSpace">
-      <h1>{name}</h1>
       <img src={img} alt="placeholder" />
       <div className="like">
         <IconThumbUp
@@ -17,7 +16,9 @@ export default function POPOSSpace(props) {
         />
         <span>{like}</span>
       </div>
+      <h1>{name}</h1>
       <div>{address}</div>
+      <div>{hours}</div>
     </div>
   );
 }
